@@ -1,0 +1,28 @@
+{
+  "name": "catfish-backend",
+  "version": "1.0.0",
+  "description": "A social media game application where friends come together with fake profiles and try to uncover who's who!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToEndThePeace/catfish-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ToEndThePeace/catfish-backend/issues"
+  },
+  "homepage": "https://github.com/ToEndThePeace/catfish-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
