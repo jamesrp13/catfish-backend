@@ -7,8 +7,8 @@ exports.up = function(knex) {
       .notNullable();
     table //Unique username
       .string("username")
-      .notNullable()
-      .unique();
+      .unique()
+      .notNullable();
     table.string("email").notNullable();
     table.string("password").notNullable();
     table.string("fname").notNullable();

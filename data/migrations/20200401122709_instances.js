@@ -7,10 +7,15 @@ exports.up = function(knex) {
       .unique()
       .notNullable();
     table.string("title").notNullable();
-    table.timestamps(true, false);
+    table.timestamp("start_time").defaultTo(knex.fn.now());
+    table
+      .integer("duration")
+      .unsigned()
+      .notNullable()
+      .defaultTo(7);
   });
 };
 
 exports.down = function(knex) {
-    return knex.schema.dropTableIfExists(tname);
+  return knex.schema.dropTableIfExists(tname);
 };

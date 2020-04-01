@@ -1,14 +1,13 @@
-const tname = "data_posts";
+const tname = "data_comments";
 exports.up = function(knex) {
   return knex.schema.createTable(tname, table => {
     table
-      .increments("post_id")
+      .increments("comment_id")
       .primary()
       .unique()
       .notNullable();
-    table.string("post_content").notNullable();
-    table.string("post_image_url");
-    table.timestamp("post_timestamp").defaultTo(knex.fn.now());
+    table.string("comment_content").notNullable();
+    table.timestamp("timestamp").defaultTo(knex.fn.now());
   });
 };
 
