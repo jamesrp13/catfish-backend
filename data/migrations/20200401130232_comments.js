@@ -5,6 +5,7 @@ exports.up = function(knex) {
       .increments("comment_id")
       .primary()
       .unique()
+      .unsigned()
       .notNullable();
     table.string("comment_content").notNullable();
     table.timestamp("timestamp").defaultTo(knex.fn.now());

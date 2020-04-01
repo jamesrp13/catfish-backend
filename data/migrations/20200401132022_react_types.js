@@ -5,6 +5,7 @@ exports.up = function(knex) {
       .increments("react_id")
       .primary()
       .unique()
+      .unsigned()
       .notNullable();
     table.string("react_type").notNullable;
   });

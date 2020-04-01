@@ -5,6 +5,7 @@ exports.up = function(knex) {
       .increments("post_id")
       .primary()
       .unique()
+      .unsigned()
       .notNullable();
     table.string("post_content").notNullable();
     table.string("post_image_url");

@@ -1,9 +1,11 @@
+const tname = "data_users";
 exports.up = function(knex) {
-  return knex.schema.createTable("data_users", table => {
+  return knex.schema.createTable(tname, table => {
     table //Primary key
       .increments("user_id")
       .primary()
       .unique()
+      .unsigned()
       .notNullable();
     table //Unique username
       .string("username")
@@ -17,5 +19,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists("data_users");
+  return knex.schema.dropTableIfExists(tname);
 };

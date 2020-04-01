@@ -5,6 +5,7 @@ exports.up = function(knex) {
       .increments("profile_id")
       .primary()
       .unique()
+      .unsigned()
       .notNullable();
     table.string("display_name").notNullable();
     table.string("about");

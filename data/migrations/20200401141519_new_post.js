@@ -1,19 +1,20 @@
-const tname = "data_instances";
+const tname = "xref_new_post";
 exports.up = function(knex) {
   return knex.schema.createTable(tname, table => {
     table
-      .increments("instance_id")
+      .increments("xref_id")
       .primary()
       .unique()
       .unsigned()
       .notNullable();
-    table.string("title").notNullable();
-    table.timestamp("start_time").defaultTo(knex.fn.now());
     table
-      .integer("duration")
+      .foreign("profile_id")
       .unsigned()
-      .notNullable()
-      .defaultTo(7);
+      .references("data_profiles.profile_id");
+    table
+      .foreign("post_id")
+      .unsigned()
+      .references("data_posts.post_id");
   });
 };
 
