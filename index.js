@@ -6,6 +6,7 @@ const testRoutes = require("./testing/testRoutes")
 
 const server = express();
 
+server.use(express.json());
 server.use("/test", testRoutes);
 
 server.use("/", (req, res) => {
