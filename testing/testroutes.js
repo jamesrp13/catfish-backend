@@ -123,7 +123,7 @@ router.get("/game/:inst/post", (req, res) => {
     res.json(tempRes);
 })
 router.get("/game/:inst/post/:id", (req, res) => {
-    //Get all posts from a certain game instance
+    //Get all posts from a certain profile
     let tempRes = tempPosts.filter(x => {
         return x.instance_id == req.params.inst &&
                x.profile_id  == req.params.id;
