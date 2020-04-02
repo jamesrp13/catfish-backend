@@ -5,23 +5,25 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamesrp13/catfish-backend.git"
+    "url": "git+https://github.com/ToEndThePeace/catfish-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jamesrp13/catfish-backend/issues"
+    "url": "https://github.com/ToEndThePeace/catfish-backend/issues"
   },
-  "homepage": "https://github.com/jamesrp13/catfish-backend#readme",
+  "homepage": "https://github.com/ToEndThePeace/catfish-backend#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "firebase": "^7.13.1"
+    "knex": "^0.20.13",
+    "pg": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
